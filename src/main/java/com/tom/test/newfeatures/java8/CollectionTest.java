@@ -22,15 +22,8 @@ public class CollectionTest {
 //        Collections.sort(names, String::compareTo);
         System.out.println(names);
 
-//        List names = new ArrayList();
-//
-//        names.add("Google");
-//        names.add("Twle");
-//        names.add("Taobao");
-//        names.add("Baidu");
-//        names.add("Sina");
-
-        names.forEach(System.out::println);
+        List<String> companyNames = List.of("Google", "Apple", "Amazon", "Netflix","Meta");
+        companyNames.forEach(System.out::println);
 
         Stream s = Stream.of(1, 3 , 5);
         System.out.println(s.mapToInt(i -> (Integer) i).sum());

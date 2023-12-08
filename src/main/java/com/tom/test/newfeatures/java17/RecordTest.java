@@ -8,7 +8,6 @@ public class RecordTest {
         System.out.println(point1.toString());
         Point point2 = Point.of(2, 3);
         System.out.println(point1.x() - point2.y());
-
     }
 }
 

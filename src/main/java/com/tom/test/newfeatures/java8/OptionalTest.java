@@ -10,10 +10,19 @@ public class OptionalTest {
 
         // Optional.ofNullable - 允许传递为 null 参数
         Optional<Integer> a = Optional.ofNullable(value1);
-        System.out.println(a.get());
+        if (a.isPresent()) {
+            System.out.println(a.get());
+        }
 
         // Optional.of - 如果传递的参数是 null，抛出异常 NullPointerException
         Optional<Integer> b = Optional.of(value2);
+        System.out.println(b.isPresent());
         System.out.println(b.get());
+
+        String name = "Peter";
+        Optional<String> c = Optional.of(name);
+        c.ifPresent(value -> {
+            System.out.println("The length of the value is: " + value.length());
+        });
     }
 }
